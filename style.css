@@ -1,0 +1,60 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f9f4f0; /* 柔和的沙漠色调 */
+}
+header {
+    background-color: #8b5a2b; /* 大地色/红棕色 */
+    color: #fff;
+    padding: 1.5rem 0;
+    text-align: center;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+}
+nav {
+    margin-top: 15px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+main {
+    padding: 30px;
+    max-width: 800px;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+h2, h3 {
+    color: #8b5a2b;
+}
+.hero {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.contact-details {
+    background-color: #fafafa;
+    padding: 20px;
+    border-left: 4px solid #8b5a2b;
+    margin-top: 20px;
+}
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: 40px;
+}
