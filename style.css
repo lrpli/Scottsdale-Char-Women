@@ -8,6 +8,7 @@
     --navy: #1e3a4d;
     --gold: #c99b4a;
     --ink: #2a2f33;
+    --leaf: #4a7b6f;
 }
 
 body {
@@ -75,16 +76,78 @@ h2, h3 {
     font-family: 'Cormorant Garamond', 'Times New Roman', serif;
 }
 .hero {
-    text-align: center;
-    margin-bottom: 26px;
+    display: grid;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    align-items: center;
+    margin-bottom: 30px;
+}
+.hero-content {
+    text-align: left;
+}
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--leaf);
+    margin-bottom: 8px;
 }
 .hero h2 {
-    font-size: 2.4rem;
-    margin-bottom: 0.5rem;
+    font-size: 2.6rem;
+    margin-bottom: 0.6rem;
 }
 .hero p {
     font-size: 1.15rem;
     color: #4a5a63;
+}
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+}
+.hero-panel {
+    background: linear-gradient(150deg, #ffffff, #f0f7f4);
+    border-radius: 16px;
+    padding: 20px 22px;
+    border: 1px solid rgba(47, 111, 106, 0.2);
+    box-shadow: 0 12px 24px rgba(30, 58, 77, 0.12);
+}
+.hero-panel h3 {
+    margin-top: 0;
+}
+.hero-panel ul {
+    padding-left: 18px;
+    margin: 0;
+    color: #42535b;
+}
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+.btn.primary {
+    background: var(--teal);
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(47, 111, 106, 0.25);
+}
+.btn.primary:hover {
+    transform: translateY(-1px);
+}
+.btn.secondary {
+    background: var(--navy);
+    color: #fff;
+}
+.btn.ghost {
+    background: #fff;
+    color: var(--navy);
+    border: 1px solid rgba(30, 58, 77, 0.2);
 }
 .org-highlight {
     background: linear-gradient(120deg, #ffffff, #f2f7f4);
@@ -109,6 +172,66 @@ h2, h3 {
     padding: 16px 18px;
     border: 1px solid rgba(30, 58, 77, 0.08);
     box-shadow: 0 8px 18px rgba(30, 58, 77, 0.08);
+}
+.impact {
+    margin-top: 30px;
+}
+.impact-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-top: 16px;
+}
+.impact-card {
+    background: #fff;
+    padding: 18px;
+    border-radius: 14px;
+    border: 1px solid rgba(30, 58, 77, 0.08);
+    box-shadow: 0 8px 18px rgba(30, 58, 77, 0.08);
+}
+.impact-card h4 {
+    margin-top: 0;
+    color: var(--teal);
+    font-family: 'Cormorant Garamond', 'Times New Roman', serif;
+    font-size: 1.35rem;
+}
+.program-preview {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    align-items: center;
+    margin-top: 30px;
+    background: linear-gradient(120deg, #ffffff, #eef5f2);
+    border-radius: 18px;
+    border: 1px solid rgba(47, 111, 106, 0.2);
+    padding: 22px;
+}
+.program-list {
+    display: grid;
+    gap: 10px;
+}
+.program-pill {
+    background: #fff;
+    border-radius: 999px;
+    padding: 10px 16px;
+    border: 1px solid rgba(30, 58, 77, 0.1);
+    font-weight: 600;
+    color: #3d545f;
+    box-shadow: 0 6px 14px rgba(30, 58, 77, 0.08);
+}
+.cta {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    margin-top: 30px;
+    align-items: center;
+}
+.cta-card {
+    background: linear-gradient(140deg, #ffffff, #eef4f0);
+    padding: 20px 22px;
+    border-radius: 16px;
+    border: 1px solid rgba(30, 58, 77, 0.1);
+    box-shadow: 0 10px 22px rgba(30, 58, 77, 0.1);
 }
 .contact-details {
     background-color: #ffffff;
@@ -151,6 +274,21 @@ h2, h3 {
 .content p {
     font-size: 1.05rem;
     color: #3f4d55;
+}
+@media (max-width: 720px) {
+    header h1 {
+        font-size: 2.1rem;
+    }
+    nav a {
+        margin: 6px 6px;
+    }
+    main {
+        margin: 20px 16px;
+        padding: 24px;
+    }
+    .hero {
+        text-align: left;
+    }
 }
 footer {
     text-align: center;
